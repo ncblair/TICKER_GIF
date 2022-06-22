@@ -17,10 +17,12 @@ function startSketch(){
         fbackgroundcolor = document.getElementById("fbackgroundcolor").value;
         fduration = Number(document.getElementById("fduration").value);
         ftype = document.getElementById("ftype").value;
-        if (ftype == "CaseTrial") {
-            ftype = p.loadFont("CaseTrial-Bold.otf");
+        
+        p.preload = function() {
+            if (ftype == "CaseTrial") {
+                ftype = p.loadFont("CaseTrial-Bold.otf");
+            }
         }
-       
 
         p.setup = function() {
             let canv = p.createCanvas(fwidth, fheight);
