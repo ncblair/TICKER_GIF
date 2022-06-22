@@ -5,7 +5,7 @@ let ffontsize = 0;
 let ffontcolor = "#000000";
 let fbackgroundcolor = "#ffffff";
 let fduration = 1;
-let ftype = "Arial";
+let ftype = "";
 
 function startSketch(){
     let sketch = function( p ) {
@@ -16,8 +16,9 @@ function startSketch(){
         ffontcolor = document.getElementById("ffontcolor").value;
         fbackgroundcolor = document.getElementById("fbackgroundcolor").value;
         fduration = Number(document.getElementById("fduration").value);
-        if (document.getElementById("ftype").value != '') {
-            ftype = p.loadFont(document.getElementById("ftype").value);
+        ftype = document.getElementById("ftype").value;
+        if (ftype == "CaseTrial") {
+            ftype = p.loadFont("CaseTrial-Bold.otf");
         }
        
 
