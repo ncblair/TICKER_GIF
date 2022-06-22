@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    <script src="https://unpkg.com/p5.createloop@0.2.8/dist/p5.createloop.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <main>
+        <form onsubmit="return false;">
+            <label for="ftext">Text:</label><br>
+            <input type="text" id="ftext" name="ftext" value="NEW FACES"><br>
+
+            <label for="fwidth">Width:</label><br>
+            <input type="text" id="fwidth" name="fwidth" value="800"><br>
+
+            <label for="fheight">Height:</label><br>
+            <input type="text" id="fheight" name="fheight" value="80"><br>
+
+            <label for="ffontsize">Font Size:</label><br>
+            <input type="text" id="ffontsize" name="ffontsize" value="18"><br>
+
+            <label for="ffontcolor">Font Color:</label>
+            <input type="color" id="ffontcolor" name="ffontcolor" value="#000000"><br>
+
+            <label for="fbackgroundcolor">Background Color:</label>
+            <input type="color" id="fbackgroundcolor" name="fbackgroundcolor" value="#FFFFFF"><br>
+
+            <label for="fduration">Duration:</label><br>
+            <input type="text" id="fduration" name="fduration" value="1"><br>
+
+            <label for="ftype">Font: (.otf or .ttf)</label><br>
+            <input type="file" id="ftype" name="ftype" accept=".ttf, .otf"><br>
+            
+            <input type="submit" value="Submit" onclick="startSketch()">
+        </form>
+    </main>
+  </body>
+</html>
