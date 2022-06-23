@@ -2,8 +2,8 @@ let ftext = "";
 let fwidth = 0;
 let fheight = 0;
 let ffontsize = 0;
-let ffontcolor = "#000000";
-let fbackgroundcolor = "#ffffff";
+let ffontcolor = "#ffffff";
+let fbackgroundcolor = "#000000";
 let fduration = 1;
 let ftype = "";
 
@@ -37,6 +37,7 @@ function startSketch(){
             p.translate(p.width / 2, p.height / 2);
             p.textSize(ffontsize);
             p.textFont(ftype);
+            p.textAlign(p.LEFT, p.CENTER);
 
             let text_width = p.textWidth(ftext);
             if (text_width <= 0.1) {
@@ -46,30 +47,9 @@ function startSketch(){
             const x = p.animLoop.theta * text_width / (2 * Math.PI) - p.width / 2 - text_width;
             let num_repetitions = Math.ceil(p.width / text_width) + 1;
             ftext_repeated = ftext.repeat(num_repetitions);
-            p.text(ftext_repeated, x, p.textAscent(ftext) / 2);
+            p.text(ftext_repeated, x, -p.textDescent(ftext) / 2);
         };
     };
  
     let myp5 = new p5(sketch);
  }
-
-
-// var submitted = false;
-// function setup() {
-//     // createLoop({duration:0.6, gif:true});
-// }
-
-// function draw() {
-//     if (submitted) {
-        
-//     }
-//     // ellipse(x, y, 50, 50);
-// }
-
-// function make_gif() {
-//     createCanvas(800, 100);
-//     fill(0);
-//     frameRate(30);
-//     createLoop({duration:0.6, gif:true});
-//     submitted = true;
-// }
