@@ -26,9 +26,9 @@ function startSketch(){
 
         p.setup = function() {
             let canv = p.createCanvas(fwidth, fheight);
+            canv.hide();
             p.frameRate(30);
             p.createLoop({duration:fduration, gif:true});
-            canv.hide();
         };
 
         p.draw = function() {
